@@ -1,3 +1,27 @@
  server:
-   port: 8080
+   port: 8090
+
+ spring:
+    datasource:
+       hikari:
+          jdbc-url: jdbc:postgresql://localhost:5432/ticket
+          username: Vlad
+          password: 12345
+#          driver-class-name: org.postgresql.Driver
+          maximum-pool-size: 150
+          minimum-idle: 30
+       url: jdbc:postgresql://localhost:5432/Ticket
+       username: Vlad
+       password: 1234
+#    mvc:
+#       pathmatch:
+#          matching-strategy: ant_path_matcher
+       postgres:
+          enabled: true
+          jdbc:
+             enabled: true
+    jpa:
+       hibernate:
+          ddl-auto: create
+       show-sql: true
 
